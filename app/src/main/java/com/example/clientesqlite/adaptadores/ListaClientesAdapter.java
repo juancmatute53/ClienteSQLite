@@ -1,5 +1,7 @@
 package com.example.clientesqlite.adaptadores;
 
+import android.content.Context;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -9,6 +11,7 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.example.clientesqlite.R;
+import com.example.clientesqlite.VerActivity2;
 import com.example.clientesqlite.entidades.Clientes;
 
 import java.util.ArrayList;
@@ -49,6 +52,15 @@ public class ListaClientesAdapter extends RecyclerView.Adapter<ListaClientesAdap
             viewTelefono= itemView.findViewById(R.id.viewTelefono);
             viewEmail = itemView.findViewById(R.id.viewEmail);
 
+            itemView.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View view) {
+                    Context context = view.getContext();
+                    Intent intent = new Intent(context, VerActivity2.class);
+                    intent.putExtra("ID",listaClientes.get(getAdapterPosition()).getId());
+                    context.startActivity(intent);
+                }
+            });
         }
     }
 }

@@ -65,4 +65,49 @@ public class DbClientes extends DbHelper {
         cursorClientes.close();
         return listaClientes;
     }
+
+
+    public Clientes verClientes(int id){
+
+        DbHelper dbHelper = new DbHelper(context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+
+        Clientes cliente = null;
+        Cursor cursorClientes;
+
+        cursorClientes = db.rawQuery("SELECT * FROM " + TABLE_CONTACTOS + " WHERE id = " + id + " LIMIT 1", null);
+        if(cursorClientes.moveToFirst()){
+
+                cliente = new Clientes();
+                cliente.setId(cursorClientes.getInt(0));
+                cliente.setNombre(cursorClientes.getString(1));
+                cliente.setTelefono(cursorClientes.getString(2));
+                cliente.setEmail(cursorClientes.getString(3));
+
+        }
+        cursorClientes.close();
+        return cliente;
+    }
+
+
+    public boolean editarCliente(int id,String nombre, String telefono, String email){
+
+        boolean correcto = false;
+
+        DbHelper dbHelper = new DbHelper(context);
+        SQLiteDatabase db = dbHelper.getWritableDatabase();
+
+        try {
+            db.execSQL("UPDATE " + TABLE_CONTACTOS + " SET nombre = '" + nombre + "', telefono = '" + telefono + "', email = '" + email + "' WHERE id = '" +id+ "'");
+            correcto = true;
+        }catch (Exception ex){
+            ex.toString();
+            correcto = false;
+        }finally {
+            db.close();
+        }
+
+        return correcto;
+    }
 }
