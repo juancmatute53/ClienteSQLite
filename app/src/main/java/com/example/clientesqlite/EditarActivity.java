@@ -12,11 +12,13 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.clientesqlite.db.DbClientes;
 import com.example.clientesqlite.entidades.Clientes;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 public class EditarActivity extends AppCompatActivity {
 
     EditText txtNombre, txtTelefono, txtEmail;
     Button btnGuarda;
+    FloatingActionButton fabEditar, fabEliminar;
     boolean correcto = false;
     Clientes cliente;
     int id = 0;
@@ -30,6 +32,10 @@ public class EditarActivity extends AppCompatActivity {
         txtTelefono = findViewById(R.id.txtTelefono);
         txtEmail = findViewById(R.id.txtEmail);
         btnGuarda = findViewById(R.id.btnGuarda);
+        fabEditar = findViewById(R.id.fabEditar);
+        fabEditar.setVisibility(View.INVISIBLE);
+        fabEliminar = findViewById(R.id.fabEliminar);
+        fabEliminar.setVisibility(View.INVISIBLE);
 
         if(savedInstanceState == null){
             Bundle extras = getIntent().getExtras();
