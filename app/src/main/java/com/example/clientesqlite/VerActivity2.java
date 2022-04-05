@@ -34,7 +34,7 @@ public class VerActivity2 extends AppCompatActivity {
         txtEmail = findViewById(R.id.txtEmail);
         btnGuarda = findViewById(R.id.btnGuarda);
         fabEditar = findViewById(R.id.fabEditar);
-        fabEliminar = findViewById(R.id.fabEliminar);
+        fabEliminar = findViewById(R.id.fabCrear);
 
         if(savedInstanceState == null){
             Bundle extras = getIntent().getExtras();

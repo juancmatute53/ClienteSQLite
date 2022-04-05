@@ -2,7 +2,6 @@ package com.example.clientesqlite;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.text.InputType;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
@@ -34,7 +33,7 @@ public class EditarActivity extends AppCompatActivity {
         btnGuarda = findViewById(R.id.btnGuarda);
         fabEditar = findViewById(R.id.fabEditar);
         fabEditar.setVisibility(View.INVISIBLE);
-        fabEliminar = findViewById(R.id.fabEliminar);
+        fabEliminar = findViewById(R.id.fabCrear);
         fabEliminar.setVisibility(View.INVISIBLE);
 
         if(savedInstanceState == null){

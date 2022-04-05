@@ -18,12 +18,13 @@ import com.example.clientesqlite.adaptadores.ListaClientesAdapter;
 import com.example.clientesqlite.db.DbClientes;
 import com.example.clientesqlite.db.DbHelper;
 import com.example.clientesqlite.entidades.Clientes;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    //Button btnCrear;
+    FloatingActionButton fabCrear;
     RecyclerView listaClientes;
     ArrayList<Clientes> listaArrayClientes;
 
@@ -31,7 +32,7 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        //btnCrear = findViewById(R.id.btnCrear);
+        fabCrear = findViewById(R.id.fabCrear);
         listaClientes = findViewById(R.id.listaClientes);
         listaClientes.setLayoutManager(new LinearLayoutManager(this));
 
@@ -42,8 +43,8 @@ public class MainActivity extends AppCompatActivity {
         ListaClientesAdapter adapter = new ListaClientesAdapter(dbClientes.mostrarClientes());
         listaClientes.setAdapter(adapter);
 
-        /*
-        btnCrear.setOnClickListener(new View.OnClickListener() {
+
+        fabCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DbHelper dbHelper = new DbHelper(MainActivity.this);
@@ -55,7 +56,7 @@ public class MainActivity extends AppCompatActivity {
 
                 }
             }
-        });*/
+        });
     }
 
     public  boolean onCreateOptionsMenu(Menu menu){
