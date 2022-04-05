@@ -57,7 +57,21 @@
         android:text="@string/btn_guarda"
         android:textSize="24sp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
+    <Button
+        android:id="@+id/btnEditar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Editar Cliente"
+        android:textSize="24sp" />
+
+    <Button
+        android:id="@+id/btnEliminar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Eliminar Cliente"
+        android:textSize="24sp" />
+
+    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
         android:id="@+id/fabEditar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -66,10 +80,10 @@
         android:src="@drawable/ic_edit" />
 
     <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabCrear"
+        android:id="@+id/fabEliminar"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_gravity="bottom|end"
         android:clickable="true"
-        android:src="@drawable/ic_delete" />
+        android:src="@drawable/ic_delete" />-->
 </LinearLayout>

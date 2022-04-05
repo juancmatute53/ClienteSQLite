@@ -16,8 +16,8 @@ import com.google.android.material.floatingactionbutton.FloatingActionButton;
 public class EditarActivity extends AppCompatActivity {
 
     EditText txtNombre, txtTelefono, txtEmail;
-    Button btnGuarda;
-    FloatingActionButton fabEditar, fabEliminar;
+    Button btnGuarda,btnEditar,btnEliminar;
+    //FloatingActionButton fabEditar, fabEliminar;
     boolean correcto = false;
     Clientes cliente;
     int id = 0;
@@ -31,10 +31,10 @@ public class EditarActivity extends AppCompatActivity {
         txtTelefono = findViewById(R.id.txtTelefono);
         txtEmail = findViewById(R.id.txtEmail);
         btnGuarda = findViewById(R.id.btnGuarda);
-        fabEditar = findViewById(R.id.fabEditar);
-        fabEditar.setVisibility(View.INVISIBLE);
-        fabEliminar = findViewById(R.id.fabCrear);
-        fabEliminar.setVisibility(View.INVISIBLE);
+        btnEditar = findViewById(R.id.btnEditar);
+        btnEditar.setVisibility(View.INVISIBLE);
+        btnEliminar = findViewById(R.id.btnEliminar);
+        btnEliminar.setVisibility(View.INVISIBLE);
 
         if(savedInstanceState == null){
             Bundle extras = getIntent().getExtras();
