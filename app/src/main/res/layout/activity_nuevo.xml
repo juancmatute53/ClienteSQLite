@@ -6,30 +6,45 @@
     android:orientation="vertical"
     tools:context=".NuevoActivity">
 
+    <TextView
+        android:id="@+id/viewNombre"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_nombre" />
     <EditText
         android:id="@+id/txtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/hint_nombre"
+        android:labelFor="@+id/viewNombre"
         android:inputType="textPersonName"
         android:textSize="24sp" />
 
+    <TextView
+        android:id="@+id/viewTelefono"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_telefono" />
     <EditText
         android:id="@+id/txtTelefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/hint_telefono"
+        android:labelFor="@+id/viewTelefono"
         android:inputType="phone"
         android:textSize="24sp" />
 
+    <TextView
+        android:id="@+id/viewEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_email" />
     <EditText
         android:id="@+id/txtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:hint="@string/hint_email"
+        android:labelFor="@+id/viewEmail"
         android:inputType="textEmailAddress"
         android:textSize="24sp" />
 
@@ -37,6 +52,7 @@
         android:id="@+id/btnGuarda"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:backgroundTint="@color/guardar"
         android:text="@string/btn_guarda"
         android:textSize="24sp" />
 </LinearLayout>

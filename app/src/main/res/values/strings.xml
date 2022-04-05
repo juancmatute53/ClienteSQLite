@@ -3,6 +3,6 @@
     <string name="hint_nombre">Nombre:</string>
     <string name="hint_telefono">Telefono:</string>
     <string name="hint_email">Email:</string>
-    <string name="btn_guarda">Guardar registro</string>
+    <string name="btn_guarda">Guardar</string>
     <string name="menu_nuevo">Nuevo registro</string>
 </resources>
