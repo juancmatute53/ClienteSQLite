@@ -11,44 +11,52 @@
         android:id="@+id/viewNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hint_nombre" />
+        android:text="@string/hint_nombre"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <EditText
         android:id="@+id/txtNombre"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:labelFor="@+id/viewNombre"
         android:inputType="textPersonName"
-        android:textSize="24sp" />
+        android:labelFor="@+id/viewNombre"
+        android:textSize="24sp"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
         android:id="@+id/viewTelefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hint_telefono" />
+        android:text="@string/hint_telefono"
+        tools:ignore="SpeakableTextPresentCheck" />
+
     <EditText
         android:id="@+id/txtTelefono"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:labelFor="@+id/viewTelefono"
         android:inputType="phone"
-        android:textSize="24sp" />
+        android:labelFor="@+id/viewTelefono"
+        android:textSize="24sp"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <TextView
-    android:id="@+id/viewEmail"
-    android:layout_width="match_parent"
-    android:layout_height="wrap_content"
-    android:text="@string/hint_email" />
+        android:id="@+id/viewEmail"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/hint_email"
+        tools:ignore="SpeakableTextPresentCheck" />
+
     <EditText
         android:id="@+id/txtEmail"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:ems="10"
-        android:labelFor="@+id/viewEmail"
         android:inputType="textEmailAddress"
-        android:textSize="24sp" />
+        android:labelFor="@+id/viewEmail"
+        android:textSize="24sp"
+        tools:ignore="SpeakableTextPresentCheck" />
 
     <Button
         android:id="@+id/btnGuarda"
