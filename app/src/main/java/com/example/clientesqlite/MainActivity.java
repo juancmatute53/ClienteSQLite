@@ -24,7 +24,7 @@ import java.util.ArrayList;
 
 public class MainActivity extends AppCompatActivity {
 
-    FloatingActionButton fabCrear;
+    Button btnCrear;
     RecyclerView listaClientes;
     ArrayList<Clientes> listaArrayClientes;
 
@@ -32,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        fabCrear = findViewById(R.id.fabCrear);
+        btnCrear = findViewById(R.id.btnCrear);
+        
         listaClientes = findViewById(R.id.listaClientes);
         listaClientes.setLayoutManager(new LinearLayoutManager(this));
 
@@ -44,7 +45,7 @@ public class MainActivity extends AppCompatActivity {
         listaClientes.setAdapter(adapter);
 
 
-        fabCrear.setOnClickListener(new View.OnClickListener() {
+        btnCrear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
                 DbHelper dbHelper = new DbHelper(MainActivity.this);

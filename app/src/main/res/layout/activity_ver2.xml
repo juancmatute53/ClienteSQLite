@@ -1,98 +1,119 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/cv"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    android:orientation="vertical"
-    tools:context=".VerActivity2">
+    android:layout_height="wrap_content"
+    android:animateLayoutChanges="true"
+    app:cardCornerRadius="20dp"
+    app:cardElevation="4dp"
+    app:cardUseCompatPadding="true">
 
-    <TextView
-        android:id="@+id/viewNombre"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:text="@string/hint_nombre"
-        tools:ignore="SpeakableTextPresentCheck" />
+        android:animateLayoutChanges="true"
+        android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/txtNombre"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        android:labelFor="@+id/viewNombre"
-        android:textSize="24sp"
-        tools:ignore="SpeakableTextPresentCheck" />
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="6dp">
 
-    <TextView
-        android:id="@+id/viewTelefono"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hint_telefono"
-        tools:ignore="SpeakableTextPresentCheck" />
+            <LinearLayout
+                android:id="@+id/linerLayout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="4dp"
+                android:layout_marginLeft="4dp"
+                android:layout_marginTop="2dp"
+                android:orientation="vertical">
 
-    <EditText
-        android:id="@+id/txtTelefono"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="phone"
-        android:labelFor="@+id/viewTelefono"
-        android:textSize="24sp"
-        tools:ignore="SpeakableTextPresentCheck" />
+                <TextView
+                    android:id="@+id/viewNombre"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_nombre" />
 
-    <TextView
-        android:id="@+id/viewEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/hint_email"
-        tools:ignore="SpeakableTextPresentCheck" />
+                <EditText
+                    android:id="@+id/txtNombre"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textPersonName"
+                    android:labelFor="@+id/viewNombre"
+                    android:textSize="24sp"/>
 
-    <EditText
-        android:id="@+id/txtEmail"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        android:labelFor="@+id/viewEmail"
-        android:textSize="24sp"
-        tools:ignore="SpeakableTextPresentCheck" />
+                <TextView
+                    android:id="@+id/viewTelefono"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_telefono"/>
 
-    <Button
-        android:id="@+id/btnGuarda"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="@string/btn_guarda"
-        android:textSize="24sp" />
+                <EditText
+                    android:id="@+id/txtTelefono"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="phone"
+                    android:labelFor="@+id/viewTelefono"
+                    android:textSize="24sp"/>
 
-    <Button
-        android:id="@+id/btnEditar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:text="Editar Cliente"
-        android:textSize="24sp" />
+                <TextView
+                    android:id="@+id/viewEmail"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/hint_email"/>
 
-    <Button
-        android:id="@+id/btnEliminar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:backgroundTint="@color/redDelete"
-        android:text="Eliminar Cliente"
-        android:textSize="24sp" />
+                <EditText
+                    android:id="@+id/txtEmail"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:inputType="textEmailAddress"
+                    android:labelFor="@+id/viewEmail"
+                    android:textSize="24sp"/>
 
-    <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabEditar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:clickable="true"
-        android:src="@drawable/ic_edit" />
+                <Button
+                    android:id="@+id/btnGuarda"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:text="@string/btn_guarda"
+                    android:textSize="24sp" />
 
-    <com.google.android.material.floatingactionbutton.FloatingActionButton
-        android:id="@+id/fabEliminar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_gravity="bottom|end"
-        android:clickable="true"
-        android:src="@drawable/ic_delete" />-->
-</LinearLayout>
+                <Button
+                    android:id="@+id/btnEditar"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:text="Editar Cliente"
+                    android:textSize="24sp" />
+
+                <Button
+                    android:id="@+id/btnEliminar"
+                    android:layout_width="370dp"
+                    android:layout_height="wrap_content"
+                    android:backgroundTint="@color/redDelete"
+                    android:text="Eliminar Cliente"
+                    android:textSize="24sp" />
+
+                <!--<com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabEditar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:clickable="true"
+                    android:src="@drawable/ic_edit" />
+
+                <com.google.android.material.floatingactionbutton.FloatingActionButton
+                    android:id="@+id/fabEliminar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="bottom|end"
+                    android:clickable="true"
+                    android:src="@drawable/ic_delete" />-->
+            </LinearLayout>
+        </RelativeLayout>
+    </LinearLayout>
+</androidx.cardview.widget.CardView>
